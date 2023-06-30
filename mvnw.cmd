@@ -1,3 +1,10 @@
+# build phase
+COPY . /app/.
+RUN chmod +x mvnw.cmd && \
+    --mount=type=cache,id=s/354c8ce6-a459-4faa-939c-6f9cbe9ac221-m2/repository,target=/app/.m2/repository ./mvnw.cmd spring-boot:run
+
+# setup phase
+
 @REM ----------------------------------------------------------------------------
 @REM Licensed to the Apache Software Foundation (ASF) under one
 @REM or more contributor license agreements.  See the NOTICE file
